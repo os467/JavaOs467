@@ -1,2 +1,4 @@
 # JavaOs467
-My java progaram(demo) hub.
+download jar-*
+
+run startup.cmd
