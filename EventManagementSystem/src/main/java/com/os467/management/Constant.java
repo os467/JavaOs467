@@ -17,20 +17,28 @@ public class Constant {
 
     public static final int EDGE_NUM = 21;
 
+    public static final int MIN = 1000000 / 16;
+
+    public static final int HOUR = MIN * 60;
+
+    public static final int EIGHT_AM = -2 * MIN;
+
+    public static final String WAYS_SPLIT_CHAR = " → ";
+
     static {
         //初始化顶点常量
-        views[0] = new View(1,"三号组团","学生宿舍楼群");
-        views[1] = new View(2,"西苑食堂","二楼的锅盖面味道不错，鸡蛋加面只要六块五");
-        views[2] = new View(3,"明德楼","教学楼");
-        views[3] = new View(4,"文体中心","运动设施健全");
-        views[4] = new View(5,"西操场","不定时有各种活动举行");
-        views[5] = new View(6,"笃学楼","爱学习的孩子都住在这里");
-        views[6] = new View(7,"东操场","留学生经常在这踢球");
-        views[7] = new View(8,"东苑食堂","二楼吃白菜配鸡腿");
-        views[8] = new View(9,"图书馆","智能化图书馆，各种书籍应有尽有");
-        views[9] = new View(10,"文理大楼","学校地标建筑");
-        views[10] = new View(11,"计算机学院","学院楼，可以在这里做实验");
-        views[11] = new View(12,"行政大楼","靠近经常出的校门口");
+        views[0] = new View(1,"三号组团","学生宿舍楼群",67,849);
+        views[1] = new View(2,"西苑食堂","二楼的锅盖面味道不错，鸡蛋加面只要六块五",238,699);
+        views[2] = new View(3,"明德楼","教学楼",399,600);
+        views[3] = new View(4,"文体中心","运动设施健全",591,882);
+        views[4] = new View(5,"西操场","不定时有各种活动举行",625,708);
+        views[5] = new View(6,"笃学楼","爱学习的孩子都住在这里",896,689);
+        views[6] = new View(7,"东操场","留学生经常在这踢球",1043,869);
+        views[7] = new View(8,"东苑食堂","二楼吃白菜配鸡腿",1163,728);
+        views[8] = new View(9,"图书馆","智能化图书馆，各种书籍应有尽有",1031,511);
+        views[9] = new View(10,"文理大楼","学校地标建筑",574,499);
+        views[10] = new View(11,"计算机学院","学院楼，可以在这里做实验",650,291);
+        views[11] = new View(12,"行政大楼","靠近经常出的校门口",1042,68);
 
         for (int i = 0; i < pre.length; i++) {
             for (int j = 0; j < pre[0].length; j++) {
@@ -96,6 +104,15 @@ public class Constant {
     public static View getViewById(String id) {
         for (int i = 0; i < views.length; i++) {
             if (views[i].getId() == Integer.parseInt(id)){
+                return views[i];
+            }
+        }
+        return null;
+    }
+
+    public static View getViewByName(String name) {
+        for (int i = 0; i < views.length; i++) {
+            if (views[i].getName().equals(name)){
                 return views[i];
             }
         }

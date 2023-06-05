@@ -1,15 +1,12 @@
 package com.os467.management.dataStruct;
 
 import java.util.List;
-import java.util.Stack;
 
 public class MyTreeMap<K, V> {
 
     private TreeNode root;
 
     private Integer nodeNum = 0;
-
-    private Integer leafNum = 0;
 
     private Double aslSuccess;
 
@@ -59,12 +56,8 @@ public class MyTreeMap<K, V> {
 
     private void incNodeNum(){
         nodeNum++;
-        incLeafNum();
     }
 
-    private void incLeafNum() {
-        leafNum = nodeNum + 1;
-    }
 
     /**
      * 二叉查找
@@ -116,45 +109,39 @@ public class MyTreeMap<K, V> {
         return aslSuccess;
     }
 
+    private boolean inOrder(TreeNode r){
+        if (r == null){
+            return false;
+        }
+        //访问左子树
+        boolean b1 = inOrder(r.lChild);
+        if (!b1){
+            failedLevelSum += r.level;
+        }
+        //访问根结点
+        levelSum += r.level;
+        //访问右子树
+        boolean b = inOrder(r.rChild);
+        if (!b){
+            failedLevelSum += r.level;
+        }
+        return true;
+    }
+
+    private Integer failedLevelSum = 0;
+    private Integer levelSum = 0;
+
     /**
      * 计算ASL
      */
     private void calculate() {
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        Integer successTime = 0;
-        Integer levelSum = 0;
-        Integer failedLevelSum = 0;
-        TreeNode treeNode = stack.peek();
-        while (treeNode != null || !stack.empty()){
-            while (treeNode != null){
-                //访问左，入栈
-                stack.push(treeNode);
-                treeNode = treeNode.lChild;
-            }
-            //访问到叶，失败次数+1
-            failedLevelSum += stack.peek().level;
-
-            treeNode = stack.peek();
-            //访问根，判断是否为终端
-            if (treeNode != null){
-                levelSum += treeNode.level;
-                successTime++;
-            }
-            //栈顶元素弹出
-            stack.pop();
-            TreeNode last = treeNode;
-            //访问右
-            treeNode = treeNode.rChild;
-            if (treeNode == null){
-                //访问到叶，失败次数+1
-                failedLevelSum += last.level;
-            }
-        }
-
-        aslFailed = (double)failedLevelSum/(double)leafNum;
-        aslSuccess = (double)levelSum / (double)successTime;
+        failedLevelSum = 0;
+        levelSum = 0;
+        inOrder(root);
+        aslFailed = (double)failedLevelSum/(double)(nodeNum+1);
+        aslSuccess = (double)levelSum / (double)nodeNum;
     }
+
 
     /**
      * 获取失败ASL

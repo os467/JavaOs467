@@ -40,7 +40,7 @@ public class Path {
         StringBuilder sb = new StringBuilder();
         sb.append("×î¶ÌÂ·¾¶Îª:");
         for (int i = 0; i < strings.length - 1; i++) {
-            sb.append(strings[i] + " ¡ú ");
+            sb.append(strings[i] + Constant.WAYS_SPLIT_CHAR);
         }
         if (strings.length > 0){
             sb.append(strings[strings.length - 1]);
