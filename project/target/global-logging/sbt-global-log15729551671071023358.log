@@ -1,0 +1,42 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[warn] No sbt.version set in project/build.properties, base directory: D:\pythonschool\PY_lab\LocalGitHub\JavaOs467\project
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.3 (Amazon.com Inc. Java 17.0.10)
+[debug] Load.defaultLoad until apply took 289.9574ms
+[debug]     Load.loadUnit: plugins took 288.1645ms
+[debug]     Load.loadUnit: defsScala took 0.7408ms
+[debug] [Loading] Scanning directory D:\pythonschool\PY_lab\LocalGitHub\JavaOs467\project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in D:\pythonschool\PY_lab\LocalGitHub\JavaOs467\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 21.578299 ms
+[debug]         Load.resolveProject(project) took 40.9859ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id project, base: D:\pythonschool\PY_lab\LocalGitHub\JavaOs467\project, plugins: List(<none>))) took 88.5176ms
+[debug] [Loading] Done in D:\pythonschool\PY_lab\LocalGitHub\JavaOs467\project, returning: (project)
+[debug]     Load.loadUnit: loadedProjectsRaw took 122.358ms
+[debug]     Load.loadUnit: cleanEvalClasses took 0.361ms
+[debug]   Load.loadUnit(file:/D:/pythonschool/PY_lab/LocalGitHub/JavaOs467/project/, ...) took 425.9719ms
+[debug] Load.apply: load took 667.7841ms
+[debug] Load.apply: resolveProjects took 8.489ms
+[debug] Load.apply: finalTransforms took 54.1124ms
+[debug] Load.apply: config.delegates took 8.206601ms
+[debug] Load.apply: Def.make(settings)... took 3030.544701ms
+[debug] Load.apply: structureIndex took 95.4602ms
+[debug] Load.apply: mkStreams took 1.7954ms
+[info] set current project to project (in build file:/D:/pythonschool/PY_lab/LocalGitHub/JavaOs467/project/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:sbt-server-b33bc5a03ba02e6d844f
+[info] started sbt server
